@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>cott's site</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.hide-content .cardabout,
+.hide-content .cardcontact,
+.hide-content .cardprojects,
+.hide-content h1,
+.hide-content h2,
+.hide-content div:not(.bg-toggle) {
+    display: none !important;
+}
+.bg-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+}
+.bg-toggle button {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255,255,255,0.7);
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    transition: background 0.2s;
+}
+.bg-toggle button:hover {
+    background: rgba(255,255,255,0.9);
+}
+</style>
+</head>
+<body>
+<div class="bg-toggle">
+    <button id="toggleContentBtn" onclick="toggleContent()" aria-label="Toggle Content">
+        <span id="toggleIcon" aria-hidden="true">🌙</span>
+    </button>
+</div>
+<script>
+function toggleContent() {
+    document.body.classList.toggle('hide-content');
+    const icon = document.getElementById('toggleIcon');
+    if (document.body.classList.contains('hide-content')) {
+        icon.textContent = "👁️"; 
+    } else {
+        icon.textContent = "👓"; 
+    }
+}
+</script>
+<div>
+<h1>welcome to my site</h1>
+<h2>still in the works tho</h2>
+</div>
+<div class="cardabout">
+    <h3>about me</h3>
+    <h4>hi, im efe, random person from izmir</h4>
+    <h4>dont know much about dev (sadly) but try (i guess??)</h4>
+</div>
+<div class="cardcontact">
+    <h3>contact info</h3>
+    <h4>e-mail (in the big 25🥀): <a href="mailto:realcott122@gmail.com">realcott122@gmail.com</a></h4>
+    <h5><a href="mailto:dingilidonzebralar@gmail.com">alt e-mail (incase you... idk??)</a></h5>
+    <h4>discord: cott122</h4>
+    <h4><a href="https://hackclub.slack.com/team/U053DV31ATD">slack (hack club)</a>
+</div>
+<div class="cardprojects">
+<h3>my projects</h3>
+<a href="https://github.com/cott3/bigboyeditor">bigboyeditor</a>
+<br>
+<a href="https://github.com/cott3/pysound">pysound</a>
+</div>
+<a href="assets/secret.html" class="eh" target="_blank" rel="noopener">.</a>
+</body>
+</html>

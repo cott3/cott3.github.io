@@ -1,0 +1,54 @@
+body {
+   background: url('assets/botlops.png') no-repeat center center fixed;
+   background-size: cover;
+   position: relative;
+   min-height: 100vh;
+   margin: 0;
+   padding: 0;
+}
+
+body::before {
+   content: "";
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100vw;
+   height: 100vh;
+   background: inherit;
+   z-index: -1;
+}
+
+h1 {
+   color: white;
+   text-align: center;
+   font-family: Arial, sans-serif;
+   font-size: 2em;
+}
+h2 {
+   color: white;
+   text-align: center;
+   font-family: Arial, sans-serif;
+   font-size: 1.5em;
+}
+.cardabout, .cardcontact, .cardprojects {
+   background-color: lightcoral;
+   border: 2px solid white;
+   border-radius: 10px;
+   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+   padding: 20px;
+   margin: 20px auto;
+   width: 80%;
+   text-align: center;
+   font-family: Arial, Helvetica, sans-serif;
+}
+.cardabout:hover, .cardcontact:hover, .cardprojects:hover {
+   background-color: coral;
+   transition: background-color 0.3s ease;
+   box-shadow: 0 6px 12px 0 rgba(0,0,0,0.3);
+}
+.eh {
+   display: block;
+   margin: 0 auto;
+   text-align: center;
+   width: fit-content;
+}
